@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+
+:root {
+
+    /* Primary Colors */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+ 
+    /* Neutral Colors */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    background-color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .card{
+    width: 300px;
+    height: 530px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.card-img .phoneimg{
+    width: 300px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card-info{
+    padding: 15px;
+}
+
+.desktopimg{
+    display: none;
+}
+
+.type{
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 0.3rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    color: var(--dark-grayish-blue);
+}
+
+h3{
+    font-size: 30px;
+    line-height: 1.9rem;
+    margin-bottom: 12px;
+    font-family: Fraunces, sans-serif;
+    color: var(--very-dark-blue);
+}
+
+p{
+    font-size: 13px;
+    line-height: 1.4rem;
+    margin-bottom: 12px;
+    font-family: Montserrat, sans-serif;
+    color: var(--dark-grayish-blue);
+    margin-bottom: 20px;
+}
+
+.price{
+    position: relative;
+}
+
+.discount{
+    font-size: 25px;
+    font-weight: 700;
+    color: #3e8169;
+}
+
+.original{
+    font-size: 12px;
+    text-decoration: line-through;
+    position: absolute;
+    right: 37%;
+    color: var(--dark-grayish-blue);
+}
+
+.add{
+    border-style: none;
+    background-color: #3e8169;
+    color: white;
+    padding: 0.6rem;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 10px;
+    width: 240px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.add:hover{
+  background-color: #194031ff;
+    transform: scale(1.05);
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+span{
+  margin-right: 10px;
+}
+span img{
+  width: 0.8rem;
+}
+
+@media screen and ( min-width: 700px){
+   
+    .card{
+        width: 560px;
+        height: 405px;
+        flex-direction: row;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .phoneimg{
+        display: none;
+    }
+
+    .desktopimg{
+        display: block;
+        border-radius: 10px 0px 0px 10px;
+        width: 270px;
+    }
+    .price{
+      margin-bottom: 25px;
+    }
+    p{
+      margin-bottom: 25px;
+    }
+    .original{
+      left: 45%;
+    }
+    .card-info{
+        padding: 25px;
+    }
+
+    .type{
+        margin-bottom: 15px;
+    }
+
+    h3{
+        width: 80%;
+        margin-bottom: 25px;
+    }
+
+    
+}
+  
